@@ -36,9 +36,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/mycrochip/fylo-landing-page-with-curved-sections.git)
+- [View solution on GitHub](https://github.com/mycrochip/huddle-landing-page-with-curved-sections.git)
 
-- Live Site URL: [GitHub Pages](https://mycrochip.github.io/fylo-landing-page-with-curved-sections/)
+- [Go to live site hosted using GitHub Pages](https://mycrochip.github.io/huddle-landing-page-with-curved-sections/)
 
 
 
