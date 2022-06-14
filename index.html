@@ -138,7 +138,8 @@
 
           <div class="news-letter__form">
             <form class="form">
-              <input type="email" name="form__email" id="formEmail" class="form-email">
+              <label for="formEmail" class="sr-only">Email</label>
+              <input type="email" name="form-email" id="formEmail" class="form-email" required>
               <button type="submit" id="submitBtn" class="submit-btn hover-opacity">Subscribe</button>
             </form>
             <p class="form-status-message" id="formStatusMessage"></p> <!--JavaScript-generated-->
@@ -168,12 +169,15 @@
     
           <div class="footer-socials">
             <a href="" class="icon">
+              <p class="sr-only">Facebook</p>
               <i class="fa-brands fa-facebook-square"></i>
             </a>
             <a href="" class="icon">
+              <p class="sr-only">Instagram</p>
               <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="" class="icon">
+              <p class="sr-only">Twitter</p>
               <i class="fa-brands fa-twitter-square"></i>
             </a>
           </div>
