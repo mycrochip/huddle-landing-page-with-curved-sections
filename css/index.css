@@ -1,0 +1,426 @@
+@import url(main.css);
+
+
+/* General Properties*/
+
+/** Layout */
+/*** All Sections Layout*/
+section > .container {
+    display: grid;
+    grid-template-areas: "LEFT" 
+                        "RIGHT";
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+
+/*** Hero Section Layout*/
+.hero-section > .container,
+.community-stats > .container,
+.flowing-conversations > .container,
+.ready-to-build > .container {
+    height: clamp(20rem, calc( 100vh - var(--header-height) ), 700px);
+}
+
+
+.hero-text {
+    margin-inline: auto;    
+}
+
+.hero-img > img {
+    width: clamp(16rem, 90%, 80rem);
+    margin: 0 auto;
+}
+
+.hero-text__title,
+.hero-text__message{
+    width: clamp(16rem, 90%, 55ch);
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.hero-btn,
+.section-btn {
+    margin-block: 2rem;
+    border: none;
+    padding: 0.625rem 2.5rem;
+    border-radius: 4rem;
+}
+
+
+
+/*** Other Sections Layout*/
+.section-img {
+    grid-area: LEFT;
+    width: clamp(16rem, 80%, 30rem);
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.section-text {
+    grid-area: RIGHT;
+    width: clamp(16rem, 100%, 30rem);
+    margin-top: -1rem;
+    margin: auto;
+}
+
+.section-text__title {
+    margin-bottom: 1rem;
+}
+
+
+
+/*** Individual Section Layout*/
+.community-stats > .container {
+    padding-block: 8rem;
+    gap: 6rem;
+}
+
+.communities-formed__title,
+.messages-sent__title {
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+}
+
+.communities-formed__title::before,
+.messages-sent__title::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    top: -1rem;
+}
+
+.communities-formed__title::before {
+    background-image: url(../images/icon-communities.svg);
+    width: 1.875rem; /*3rem * 0.625*/
+    height: 1.5625rem; /*2.5rem * 0.625*/
+}
+
+.messages-sent__title::before {
+    background-image: url(../images/icon-messages.svg);
+    width: 1.5rem; /*3rem * 0.5*/
+    height: 1.25rem; /*2.5rem * 0.5*/
+}
+
+.grow-together > .container,
+.your-users > .container {   
+    height: clamp(20rem, calc( 100vh - calc(var(--header-height) * 2) ), 800px);
+}
+
+.flowing-conversations > .container {
+    height: clamp(20rem, 100vh, 800px);
+    align-content: flex-start;
+}
+
+.flowing-conversations > .container > * {
+    margin-top: 7rem;
+}
+
+.ready-to-build > .container {
+    grid-template-areas: "TEXT";
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.ready-to-build .section-text {
+    grid-area: TEXT;
+    margin-top: 8rem;
+    width: 100%;
+}
+
+
+
+
+
+/** Background Image and Color */
+/*** Individual Sections BIC*/
+.main,
+.community-stats {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.main {
+    background-image: url(../images/bg-footer-top-mobile.svg);
+}
+
+.community-stats {
+    background-image: url(../images/bg-section-top-mobile-1.svg);
+}
+
+.hero-btn,
+.section-btn {
+    background-color: var(--clr-primary-1);
+    color: var(--clr-neutral-1000);
+}
+
+.grow-together,
+.your-users {
+    background-color: var(--clr-neutral-500);
+}
+
+.flowing-conversations {
+    background-image: url(../images/bg-section-top-mobile-2.svg), url(../images/bg-section-bottom-mobile-1.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: bottom, top;
+}
+
+.ready-to-build {
+    background-image: url(../images/bg-section-bottom-mobile-2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.communities-formed__tag,
+.messages-sent__tag {
+    opacity: 0.7;
+}
+
+
+
+
+
+/** Typography */
+/*** All Sections Typo*/
+.hero-btn,
+.hero-text__message,
+.communities-formed__title,
+.messages-sent__title,
+.communities-formed__tag,
+.messages-sent__tag,
+.section-text {
+    font-family: var(--ff-main);
+    font-size: 0.875rem;
+    font-weight: var(--fw-500);
+    line-height: 1.5;
+}
+
+.hero-btn,
+.communities-formed__title,
+.messages-sent__title {
+    font-weight: var(--fw-700);
+}
+
+.hero-text__title,
+.section-text__title {
+    font-family: var(--ff-header);
+    font-weight: var(--fw-700);
+    font-size: 1.5rem;
+}
+
+.communities-formed__title,
+.messages-sent__title {
+    font-size: 4rem;
+}
+
+.communities-formed__tag,
+.messages-sent__tag {
+    font-weight: var(--fw-400);
+}
+
+.communities-formed__tag,
+.messages-sent__tag {
+    font-size: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.ready-to-build .section-btn {
+    font-size: 0.75rem;
+}
+
+
+
+
+
+/* #######################
+    Media Queries
+####################### */
+
+/* ***********************
+    Default Screen - 500px
+*********************** */
+@media only screen and (min-width: 500px) {
+
+    /* General Properties*/
+
+    /** Layout */
+    /*** All Sections Layout*/
+    section:not(.hero-section):not(.ready-to-build) > .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "LEFT RIGHT";
+        justify-content: center;
+        gap: 4rem;
+        text-align: left;
+    }
+
+
+    /*** Hero Section Layout*/
+
+    .hero-text {
+        padding-block: 12rem 4rem;
+    }
+
+    .hero-section > .container {
+        height: fit-content
+    }
+
+    .hero-btn,
+    .section-btn {
+        margin-block: 2rem;
+        border: none;
+        padding: 1.75rem 7rem;
+        border-radius: 6rem;
+    }
+
+
+    /*** Other Sections Layout*/    
+    .section-img,
+    .section-text {
+        padding-top: 0;
+        align-self: center;
+    }
+    .section-img {
+        grid-area: RIGHT;
+        width: clamp(16rem, 90%, 40rem);
+    }
+
+    .flowing-conversations .section-img {
+        grid-area: LEFT;
+    }
+
+    .section-text {
+        grid-area: LEFT;
+        width: clamp(16rem, 100%, 40rem);
+        margin-top: 0;
+        margin: auto;
+    }
+
+    .flowing-conversations .section-text {
+        grid-area: RIGHT;
+    }
+
+    .section-text__title {
+        margin-bottom: 1rem;
+    }
+
+
+
+    /*** Individual Section Layout*/
+
+    .communities-formed {
+        grid-area: LEFT;
+    }
+
+    .messages-sent {
+        grid-area: RIGHT;
+    }
+
+    .communities-formed__title::before,
+    .messages-sent__title::before {
+        top: -2.5rem;
+    }
+
+    .communities-formed__title::before {
+        background-image: url(../images/icon-communities.svg);
+        width: 3.75rem; /*3rem * 1.25*/
+        height: 3.125rem; /*2.5rem * 1.25*/
+    }
+
+    .messages-sent__title::before {
+        background-image: url(../images/icon-messages.svg);
+        width: 3rem;
+        height: 2.5rem;
+    }
+
+    .flowing-conversations > .container {
+        align-content: center;
+    }
+    
+    .flowing-conversations > .container > * {
+        margin-top: auto;
+    }
+    
+
+    .ready-to-build > .container {
+        align-content: center;
+    }
+
+    .ready-to-build .section-text {
+        margin-top: 0;
+    }
+
+    .ready-to-build > .container{
+        height: clamp(20rem, 100vh, 800px);
+    }
+    
+
+    
+    /** Background Image and Color */
+    /*** Individual Sections BIC*/
+    .main {
+        background-image: url(../images/bg-footer-top-desktop.svg);
+    }
+
+    .community-stats {
+        background-image: url(../images/bg-section-top-desktop-1.svg);
+    }
+
+    .grow-together,
+    .your-users {
+        background-color: var(--clr-neutral-500);
+    }
+
+    .flowing-conversations {
+        background-image: url(../images/bg-section-top-desktop-2.svg), url(../images/bg-section-bottom-desktop-1.svg);
+    }
+
+    .ready-to-build {
+        background-image: url(../images/bg-section-bottom-desktop-2.svg);
+    }
+
+
+
+
+
+    /** Typography */
+    /*** All Sections Typo*/
+    .hero-text__title {
+        font-size: 3rem;
+    }
+
+    .hero-btn,
+    .hero-text__message {
+        font-size: 1.25rem;
+    }
+
+    .communities-formed__title,
+    .messages-sent__title,
+    .section-text__title {
+        font-size: 3rem;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+    }
+
+    .communities-formed__title,
+    .messages-sent__title {
+        font-size: 6rem;
+    }
+        
+    .communities-formed__tag,
+    .messages-sent__tag {
+        font-size: 1.5rem;
+    }
+
+    .ready-to-build .section-btn {
+        font-size: 1.25rem;
+    }
+}

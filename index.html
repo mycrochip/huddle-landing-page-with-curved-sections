@@ -5,63 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <script src="https://kit.fontawesome.com/df7b35a0c6.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Try it free
+  <header class="header">
+    <!-- Header -->
+    <div class="container container--header">
+      <a href="#" class="header-logo">
+        <img src="images/logo.svg" alt="Huddle Logo" class="logo">
+      </a>
 
-  Build The Community Your Fans Will Love
+      <div class="header-cta">
+        <a href="#" class="hover-opacity">Try it free</a>
+      </div>
+    </div> <!--Header>Container-->
+  </header>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-text">
+          <h1 class="hero-text__title">Build The Community Your Fans Will Love</h1>
 
-  Get Started For Free
+          <p class="hero-text__message">Huddle re-imagines the way we build communities. You have a voice, but so does 
+            your audience. Create connections with your users as you engage in genuine discussion.</p>
 
-  1.4k+
-  Communities Formed
+          <button class="hero-btn hover-opacity box-shadow">Get Started For Free</button>
+        </div>
 
-  2.7m+
-  Messages Sent
+        <div class="hero-img">
+          <img src="images/screen-mockups.svg" alt="Screen Mock-ups Illustration">
+        </div>
+      </div> <!--/"Hero Section" Container-->
+    </section>
 
-  Grow Together
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
+    
+    <!-- Community Stats -->
+    <section class="community-stats">
+      <div class="container">
+        <div class="communities-formed">
+          <h2 class="communities-formed__title">1.4k+</h2>
 
-  Flowing Conversations
-  You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-  just-in-time loading for a more natural flow.
+          <p class="communities-formed__tag">Communities Formed</p>
+        </div>
 
-  Your Users
-  It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-  once signed in to your app, your users can start chatting immediately.
+        <div class="messages-sent">
+          <h2 class="messages-sent__title">2.7m+</h2>
 
-  Ready To Build Your Community?
-  Get Started For Free
+          <p class="messages-sent__tag">Messages Sent</p>
+        </div>
+      </div> <!--/"Community Stats" Container-->
+    </section>
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-  vestibulum a, ultrices quis sem.
+    <!-- Grow Together -->
+    <section class="grow-together">
+      <div class="container">
+        <div class="section-img">
+          <img src="images/illustration-grow-together.svg" alt="Grow Together Illustration">
+        </div>
+
+        <div class="section-text">
+          <h2 class="section-text__title">Grow Together</h2>
+
+          <p class="section-text__message">Generate meaningful discussions with your audience and build a strong, loyal community. 
+            Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>
+      </div> <!--Grow Together>Container-->
+    </section>
+    
+    <!-- Flowing Conversations -->
+    <section class="flowing-conversations">
+      <div class="container">
+        <div class="section-img">
+          <img src="images/illustration-flowing-conversation.svg" alt="Flowing Conversations Illustration">
+        </div>
   
-  Phone: +1-543-123-4567
-  example@huddle.com
+        <div class="section-text">
+          <h2 class="section-text__title">Flowing Conversations</h2>
+  
+          <p class="section-text__message">You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+            just-in-time loading for a more natural flow.</p>
+        </div>
+      </div> <!--Flowing Conversations>Container-->
+    </section>
 
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
+    <!-- Your Users -->
+    <section class="your-users">
+      <div class="container">
+        <div class="section-img">
+          <img src="images/illustration-your-users.svg" alt="Your users Illustration">
+        </div>
+  
+        <div class="section-text">
+          <h2 class="section-text__title">Your Users</h2>
+  
+          <p class="section-text__message">It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+            once signed in to your app, your users can start chatting immediately.</p>
+        </div>   
+      </div> <!--Your Users>Container-->
+    </section>
 
-  Subscribe
+      <!-- Ready To Build -->
+    <section class="ready-to-build">
+      <div class="container">
+        <div class="section-text">
+          <h2 class="section-text__title">Ready To Build Your Community?</h2>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+          <button class="section-btn hover-opacity box-shadow">Get Started For Free</button>
+        </div>
+      </div> <!--Ready To Build>Container-->
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <!-- News Letter -->
+        <section class="news-letter">
+          <div class="news-letter__text">
+            <h2 class="news-letter__title">Newsletter</h2>
+
+            <p class="news-letter__message">To receive tips on how to grow your community, sign up to our weekly newsletter. We&apos;ll never 
+              send you spam or pass on your email address</p>
+          </div>
+
+          <div class="news-letter__form">
+            <form class="form">
+              <input type="email" name="form__email" id="formEmail" class="form-email">
+              <button type="submit" id="submitBtn" class="submit-btn hover-opacity">Subscribe</button>
+            </form>
+            <p class="form-status-message" id="formStatusMessage"></p> <!--JavaScript-generated-->
+          </div>
+        </section>
+      </div> <!--/Footer Right-->
+      
+      <div class="footer-left">
+        <!-- Info -->
+        <section class="info">
+          <h2 class="sr-only footer-info">Footer Info</h2>
+
+          <a href="#" class="footer-logo">
+            <img src="images/logo.svg" alt="Huddle Logo" class="logo">
+          </a>
+    
+          <div class="footer-address">
+            <p class="footer-address__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+              vestibulum a, ultrices quis sem.</p>
+    
+            <div class="footer-address-contact">
+              <p class="contact__phone">Phone: +1-543-123-4567</p>
+    
+              <p class="contact__email">example@huddle.com</p>
+            </div>
+          </div>
+    
+          <div class="footer-socials">
+            <a href="" class="icon">
+              <i class="fa-brands fa-facebook-square"></i>
+            </a>
+            <a href="" class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="icon">
+              <i class="fa-brands fa-twitter-square"></i>
+            </a>
+          </div>
+        </section>
+      </div> <!--/Footer Left-->
+
+      <div class="author">
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.frontendmentor.io/profile/mycrochip">mycrochip</a>.
+        </p>
+      </div>
+    </div> <!--Footer>/Container-->
   </footer>
 </body>
 </html>
